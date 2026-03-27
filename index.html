@@ -1058,6 +1058,89 @@
         color: var(--accent);
       }
 
+      /* ── NEW EXPERIENCE DESIGN ── */
+.exp-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.exp-header h3 {
+  font-family: var(--heading);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.exp-header span {
+  font-size: 0.85rem;
+  color: var(--text2);
+}
+
+.exp-metrics {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.exp-metrics span {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 217, 163, 0.2);
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+.exp-block {
+  margin-top: 18px;
+}
+
+.exp-block h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.exp-block p {
+  font-size: 0.9rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.exp-block ul {
+  padding-left: 18px;
+}
+
+.exp-block li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--text2);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-block p,
+  .exp-block li {
+    font-size: 0.85rem;
+  }
+}
+
       /* ── TIMELINE ── */
       #experience {
         background: var(--bg2);
@@ -2268,54 +2351,60 @@
     </section>
 
     <!-- ── EXPERIENCE ── -->
-    <section id="experience">
-      <div class="section-inner">
-        <div class="section-tag reveal">Experience</div>
-        <h2 class="section-h2 reveal reveal-delay-1">Impact Timeline</h2>
-        <p class="section-desc reveal reveal-delay-2">
-          Not a list of responsibilities — a record of outcomes.
-        </p>
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Feb 2025 – Present</div>
-            <div class="timeline-role">Data Analyst</div>
-            <div class="timeline-org">CMR University, Bangalore</div>
-            <ul class="timeline-impacts">
-              <li>
-                Stopped <strong>₹4.5L in revenue leakage</strong> by detecting
-                publisher attribution fraud before payments were processed
-              </li>
-              <li>
-                Automated
-                <strong>70% of manual reporting workflows</strong> using Google
-                Apps Script — saving 10+ analyst hours per week
-              </li>
-              <li>
-                Built dashboards across <strong>1M+ records</strong> from MCUBE,
-                Meritto CRM, and Google Ads — driving a
-                <strong>15% productivity improvement</strong> across teams
-              </li>
-              <li>
-                Modeled <strong>3+ years of historical data</strong> to set
-                data-driven daily, weekly, and monthly targets for Admissions,
-                Applications, and Telecalling
-              </li>
-              <li>
-                Delivered <strong>weekly CEO-level insight reports</strong> —
-                translating cross-departmental data into executive decisions
-              </li>
-              <li>
-                Established a clean data foundation by migrating
-                <strong>1M+ CRM records</strong> into Meritto across 3
-                departments with high accuracy
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+   <section id="experience">
+  <div class="section-inner">
+    <div class="section-tag">Experience</div>
+    <h2 class="section-h2">Where I Created Business Impact</h2>
+    <p class="section-desc">
+      Real-world problems solved using data — focused on measurable outcomes,
+      not just reporting.
+    </p>
 
+    <div class="exp-card">
+
+      <div class="exp-header">
+        <h3>Data Analyst</h3>
+        <span>CMR University · Bangalore</span>
+      </div>
+
+      <div class="exp-metrics">
+        <span>₹4.5L+ Saved</span>
+        <span>70% Automated</span>
+        <span>1M+ Records</span>
+      </div>
+
+      <div class="exp-block">
+        <h4>Problem</h4>
+        <p>
+          Finance, marketing, and operations teams lacked a unified data view.
+          Decisions were delayed due to disconnected CRM, ERP, and telecalling systems,
+          along with manual reporting.
+        </p>
+      </div>
+
+      <div class="exp-block">
+        <h4>Action</h4>
+        <p>
+          Built end-to-end Power BI dashboards integrating MCUBE, CRM, and ERP data.
+          Developed DAX measures for performance tracking and automated reporting
+          workflows using Google Apps Script.
+        </p>
+      </div>
+
+      <div class="exp-block">
+        <h4>Impact</h4>
+        <ul>
+          <li>Stopped ₹4.5L+ revenue leakage via fraud detection</li>
+          <li>Automated 70% of manual reporting workflows</li>
+          <li>Improved productivity by 15% across teams</li>
+          <li>Delivered weekly CEO-level insight reports</li>
+          <li>Enabled real-time decision-making across departments</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
     <!-- ── EDUCATION ── -->
     <section id="education">
       <div class="section-inner">
