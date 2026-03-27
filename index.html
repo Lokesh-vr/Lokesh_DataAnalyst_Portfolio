@@ -1455,12 +1455,27 @@
           grid-template-columns: 1fr 1fr;
         }
 
-        /* TIMELINE */
+        /* ── EXPERIENCE / TIMELINE FIX ── */
         .timeline {
-          padding-left: 24px;
+          padding-left: 20px;
         }
         .timeline-dot {
-          left: -30px;
+          left: -26px;
+          width: 10px;
+          height: 10px;
+        }
+        .timeline-role {
+          font-size: 1rem;
+        }
+        .timeline-org {
+          font-size: 0.82rem;
+          margin-bottom: 12px;
+        }
+        .timeline-impacts li {
+          font-size: 0.82rem;
+          padding: 9px 11px;
+          gap: 8px;
+          line-height: 1.5;
         }
 
         /* ABOUT */
@@ -1520,6 +1535,20 @@
         }
         .impact-label {
           font-size: 0.68rem;
+        }
+
+        /* Extra timeline tightening on very small screens */
+        .timeline {
+          padding-left: 16px;
+        }
+        .timeline-dot {
+          left: -22px;
+          width: 8px;
+          height: 8px;
+        }
+        .timeline-impacts li {
+          font-size: 0.8rem;
+          padding: 8px 10px;
         }
       }
     </style>
@@ -2496,7 +2525,6 @@
     </footer>
 
     <!-- ── SCRIPTS ── -->
-
     <script>
       // Scroll progress bar
       window.addEventListener("scroll", () => {
@@ -2506,6 +2534,7 @@
         const progress = (scrollTop / docHeight) * 100;
         document.getElementById("scrollProgress").style.width = progress + "%";
       });
+
       // Hamburger menu
       function toggleMenu() {
         const menu = document.getElementById("mobileMenu");
@@ -2517,7 +2546,6 @@
         document.getElementById("mobileMenu").classList.remove("open");
         document.getElementById("hamburger").classList.remove("open");
       }
-      // Close menu on outside click
       document.addEventListener("click", function (e) {
         const menu = document.getElementById("mobileMenu");
         const btn = document.getElementById("hamburger");
